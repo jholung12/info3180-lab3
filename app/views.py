@@ -34,7 +34,7 @@ def contact():
         msg.body = 'This is the body of the message'
         mail.send(msg)
         flash('You successfully sent your message.')
-        return redirect('/')
+        return redirect(url_for('home'))
     return render_template('contact.html', form=form)
 ###
 # The functions below should be applicable to all Flask apps.
